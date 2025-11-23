@@ -24,26 +24,15 @@
     <ClInclude Include="Resource.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="napisyNaZdjeciach.h">
+    <ClInclude Include="SRC\GUI.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="GUI.h">
+    <ClInclude Include="SRC\GUIMyFrame1.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="GUIMyFrame1.h">
+    <ClInclude Include="SRC\napisyNaZdjeciach.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="napisyNaZdjeciach.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="GUI.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="GUIMyFrame1.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="napisyNaZdjeciach.rc">
@@ -57,5 +46,16 @@
     <Image Include="napisyNaZdjeciach.ico">
       <Filter>Pliki zasobów</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SRC\GUI.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\GUIMyFrame1.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="SRC\napisyNaZdjeciach.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
