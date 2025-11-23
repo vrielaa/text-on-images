@@ -18,6 +18,10 @@
 #include <wx/string.h>
 #include <wx/splitter.h>
 #include <wx/sizer.h>
+#include <wx/bitmap.h>
+#include <wx/image.h>
+#include <wx/icon.h>
+#include <wx/menu.h>
 #include <wx/frame.h>
 
 ///////////////////////////////////////////////////////////////////////////
@@ -33,6 +37,14 @@ class MyFrame1 : public wxFrame
 		wxSplitterWindow* m_splitter1;
 		wxPanel* m_panel3;
 		wxPanel* m_panel4;
+		wxMenuBar* m_menubar1;
+		wxMenu* Image;
+		wxMenu* m_menu11;
+
+		// Virtual event handlers, override them in your derived class
+		virtual void m_open_imageOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
+		virtual void m_open_imageOnUpdateUI( wxUpdateUIEvent& event ) { event.Skip(); }
+
 
 	public:
 

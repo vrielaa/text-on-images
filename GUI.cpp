@@ -31,8 +31,26 @@ MyFrame1::MyFrame1( wxWindow* parent, wxWindowID id, const wxString& title, cons
 
 	this->SetSizer( bSizer1 );
 	this->Layout();
+	m_menubar1 = new wxMenuBar( 0 );
+	Image = new wxMenu();
+	m_menu11 = new wxMenu();
+	wxMenuItem* m_menu11Item = new wxMenuItem( Image, wxID_ANY, _("MyMenu"), wxEmptyString, wxITEM_NORMAL, m_menu11 );
+	Image->Append( m_menu11Item );
+
+	wxMenuItem* m_open_image;
+	m_open_image = new wxMenuItem( Image, wxID_ANY, wxString( _("Open image") ) , wxEmptyString, wxITEM_NORMAL );
+	Image->Append( m_open_image );
+
+	m_menubar1->Append( Image, _("Image") );
+
+	this->SetMenuBar( m_menubar1 );
+
 
 	this->Centre( wxBOTH );
+
+	// Connect Events
+	Image->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MyFrame1::m_open_imageOnMenuSelection ), this, m_open_image->GetId());
+	this->Connect( m_open_image->GetId(), wxEVT_UPDATE_UI, wxUpdateUIEventHandler( MyFrame1::m_open_imageOnUpdateUI ) );
 }
 
 MyFrame1::~MyFrame1()
